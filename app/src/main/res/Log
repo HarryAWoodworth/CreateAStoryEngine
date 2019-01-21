@@ -1,0 +1,65 @@
+/*********************** WHERE U ARE RN ***********************/
+
+
+
+/*********************** WHERE U ARE RN ***********************/
+
+DrawableLocation
+    Focus (ID)
+        Area (ToTransStr, FromTransStr,
+            Room
+                HouseRoom
+                    Invadable
+
+                    Stash
+
+                    WorkStation
+
+            Puzzle
+
+    Transition
+
+    Event
+
+    /** TODO **/
+
+    concepts:
+
+    Map that when clicked on brings up a pop up
+
+
+    !!!IMPORTANT!!!
+
+    (X) Add a Game reference into Area and store the currentArea in the Game?
+    (X) SoundMod
+    ( ) Global Flags (HashMap) implementation and test
+    ( ) Flagsetter Action
+    ( ) through area testing
+    ( ) event testing
+    ( ) global game events (i.e. after X rooms, delete transition from room Y and add a random room transition in)
+    ( ) Items
+        ( ) Wearables
+        ( ) Weapons
+        ( ) Items
+    ( ) Player
+        ( ) Player inventory
+        ( ) Calculations
+    ( ) UI
+        ( ) Inventory (tray on bottom?)
+        ( ) Transition Animation between areas
+        ( ) Tap to load description right away
+
+
+    !!!FEATURE!!!
+
+    ( ) Enemies
+        ( ) Enemies that drain sanity instead of health
+        ( ) Enemies that drain health
+        ( ) Enemies that travel through areas
+        ( ) Multi-area timer (i.e. sanity drain)
+
+    ( ) Area that can be reinforced
+        ( ) Generates enemies if not reinforced?
+
+    !!!MAYBE!!!
+
