@@ -1,3 +1,0 @@
-flagTaken true
-swordTaken false
-runnerDead true

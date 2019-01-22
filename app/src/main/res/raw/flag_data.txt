@@ -1,0 +1,3 @@
+swordTaken false
+rainFell false
+droppedPenguin true

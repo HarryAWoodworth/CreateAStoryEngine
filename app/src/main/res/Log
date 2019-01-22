@@ -4,62 +4,56 @@
 
 /*********************** WHERE U ARE RN ***********************/
 
-DrawableLocation
-    Focus (ID)
-        Area (ToTransStr, FromTransStr,
-            Room
-                HouseRoom
-                    Invadable
-
-                    Stash
-
-                    WorkStation
-
-            Puzzle
-
-    Transition
-
-    Event
-
     /** TODO **/
 
-    concepts:
+!!!IMPORTANT ENGINE STUFF!!!
 
-    Map that when clicked on brings up a pop up
+            (X) Add a Game reference into Area and store the currentArea in the Game?
+            (X) SoundMod
+            (X) Global Flags (HashMap) implementation and test
+            (X) Flag-setter Action
+
+    ********** DATA DRIVEN **********
+    1-4     ( ) Save Game
+    3           ( ) Write Areas to file (and Actions)
+    4           ( ) Write current player location and information to file
+    1           ( ) Write flags back to file
+    3-4     ( ) Load Game
+    3           ( ) Load Areas from file
+    4           ( ) Load Player from file
+                (X) Load flags from file
+    ********** DATA DRIVEN **********
+
+    1       ( ) through area testing
+    1           ( ) random event testing
+    2       ( ) Global Clock (current time)
+    2           ( ) timed events testing
+    3       ( ) Area music (change only if  area says so (has diff music id saved), otherwise play globally)
+    2       ( ) global game events (i.e. after X rooms, delete transition from room Y and add a random room transition in)
 
 
-    !!!IMPORTANT!!!
-
-    (X) Add a Game reference into Area and store the currentArea in the Game?
-    (X) SoundMod
-    ( ) Global Flags (HashMap) implementation and test
-    ( ) Flagsetter Action
-    ( ) through area testing
-    ( ) event testing
-    ( ) global game events (i.e. after X rooms, delete transition from room Y and add a random room transition in)
-    ( ) Items
-        ( ) Wearables
-        ( ) Weapons
-        ( ) Items
-    ( ) Player
-        ( ) Player inventory
-        ( ) Calculations
-    ( ) UI
-        ( ) Inventory (tray on bottom?)
-        ( ) Transition Animation between areas
-        ( ) Tap to load description right away
+    4       ( ) Items
+    v           ( ) Wearables
+                ( ) Weapons
+                ( ) Items
+            ( ) Player
+                ( ) Player inventory
+                ( ) Calculations
+            ( ) UI
+                ( ) Inventory (tray on bottom?)
+    ^           ( ) Transition Animation between areas
+    4           ( ) Tap to load description right away
 
 
-    !!!FEATURE!!!
+!!!AFTER-ENGINE!!!
 
-    ( ) Enemies
-        ( ) Enemies that drain sanity instead of health
-        ( ) Enemies that drain health
-        ( ) Enemies that travel through areas
-        ( ) Multi-area timer (i.e. sanity drain)
+            ( ) Enemies
+                ( ) Enemies that drain sanity instead of health
+                ( ) Enemies that drain health
+                ( ) Enemies that travel through areas
+                ( ) Multi-area timer (i.e. sanity drain)
 
-    ( ) Area that can be reinforced
-        ( ) Generates enemies if not reinforced?
+            ( ) Area that can be reinforced
+                ( ) Generates enemies if not reinforced?
 
-    !!!MAYBE!!!
 

@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.grid_entry.view.*
 import android.media.AudioManager
 
-private const val TAG : String = "MAIN_ACTIVITY"
+private const val TAG : String = "void_MAIN_ACTIVITY"
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // Set Audio Manager
         val audioManager = getSystemService(Context.AUDIO_SERVICE) as AudioManager
         audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, 20, 0)
 
@@ -40,6 +41,17 @@ class MainActivity : AppCompatActivity() {
         /** ACTIVE TEST **/
         transitionTest()
         /** ACTIVE TEST **/
+    }
+
+    // Save user progress via writing to files
+    override fun onStop()
+    {
+        super.onStop()
+
+        Log.d(TAG,"onStop called")
+
+        // Save the game data
+        game.saveData()
     }
 
     // Activate immersive mode through flags
@@ -132,8 +144,6 @@ class MainActivity : AppCompatActivity() {
         val soundPlayer = MediaPlayer.create(this,soundId)
         soundPlayer.start()
     }
-
-/********** MODIFIER FUNCTIONS **********/
 
     // Custom adapter class for buttonGrid
     class CustomAdapter(private val context : Context, val actions : MutableList<Action>) : BaseAdapter()
@@ -340,6 +350,5 @@ class MainActivity : AppCompatActivity() {
         game.setCurrentArea(area1)
         initStartArea(game)
     }
-    /********** TESTS **********/
 
 }
