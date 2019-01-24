@@ -1,4 +1,7 @@
-package com.blueshroom.harry.avoid
+package com.blueshroom.harry.avoid.Actions
+
+import com.blueshroom.harry.avoid.Game
+import com.blueshroom.harry.avoid.Mods.Mod
 
 /**
  * Takes a text String to return in getActionText()

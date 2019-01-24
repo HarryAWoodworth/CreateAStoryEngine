@@ -14,10 +14,10 @@
             (X) Flag-setter Action
 
     ********** DATA DRIVEN **********
-    1-4     ( ) Save Game
+    3-4     ( ) Save Game
     3           ( ) Write Areas to file (and Actions)
     4           ( ) Write current player location and information to file
-    1           ( ) Write flags back to file
+                (X) Write flags back to file
     3-4     ( ) Load Game
     3           ( ) Load Areas from file
     4           ( ) Load Player from file

@@ -1,4 +1,6 @@
-package com.blueshroom.harry.avoid
+package com.blueshroom.harry.avoid.Actions
+
+import com.blueshroom.harry.avoid.Game
 
 abstract class Action(private val game : Game, val identifier : String, val globalFlagsSet : List<FlagSetter>)
 {

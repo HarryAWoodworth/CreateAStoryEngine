@@ -1,4 +1,6 @@
-package com.blueshroom.harry.avoid
+package com.blueshroom.harry.avoid.Mods
+
+import com.blueshroom.harry.avoid.Actions.FlagSetter
 
 class FlagMod(private val setters : List<FlagSetter>) : Mod()
 {

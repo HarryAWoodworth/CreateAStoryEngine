@@ -1,4 +1,7 @@
-package com.blueshroom.harry.avoid
+package com.blueshroom.harry.avoid.Actions
+
+import com.blueshroom.harry.avoid.Areas.Transition
+import com.blueshroom.harry.avoid.Game
 
 /**
  * Transition Action takes a Transition and stores it.

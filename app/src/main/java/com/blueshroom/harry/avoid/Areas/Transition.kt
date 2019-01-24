@@ -1,4 +1,4 @@
-package com.blueshroom.harry.avoid
+package com.blueshroom.harry.avoid.Areas
 
 /**
  * https://discuss.kotlinlang.org/t/overload-tostring-for-use-in-arrayadapter/3743/3

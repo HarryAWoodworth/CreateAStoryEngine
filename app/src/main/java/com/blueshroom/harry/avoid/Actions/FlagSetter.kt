@@ -1,4 +1,4 @@
-package com.blueshroom.harry.avoid
+package com.blueshroom.harry.avoid.Actions
 
 /**
  * For setting global flags, holds the String key

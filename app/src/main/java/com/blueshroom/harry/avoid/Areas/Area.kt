@@ -1,6 +1,9 @@
-package com.blueshroom.harry.avoid
+package com.blueshroom.harry.avoid.Areas
 
 import android.util.Log
+import com.blueshroom.harry.avoid.Actions.Action
+import com.blueshroom.harry.avoid.R
+import com.blueshroom.harry.avoid.Actions.TransitionAction
 
 // Logging tag
 private const val TAG : String = "Area Class"

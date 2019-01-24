@@ -2,6 +2,9 @@ package com.blueshroom.harry.avoid
 
 import android.content.Context
 import android.util.Log
+import com.blueshroom.harry.avoid.Actions.FlagSetter
+import com.blueshroom.harry.avoid.Areas.Area
+import com.blueshroom.harry.avoid.Areas.GenericArea
 
 private const val FLAG_FILE_NAME = "flag_data.txt"
 private const val FLAG_FILE_ID = R.raw.flag_data

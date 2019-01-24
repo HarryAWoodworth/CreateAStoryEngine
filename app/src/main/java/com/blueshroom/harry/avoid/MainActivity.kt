@@ -12,6 +12,14 @@ import android.widget.BaseAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.grid_entry.view.*
 import android.media.AudioManager
+import com.blueshroom.harry.avoid.Actions.Action
+import com.blueshroom.harry.avoid.Actions.FlagSetter
+import com.blueshroom.harry.avoid.Actions.ModifierAction
+import com.blueshroom.harry.avoid.Actions.TransitionAction
+import com.blueshroom.harry.avoid.Areas.Area
+import com.blueshroom.harry.avoid.Areas.GenericArea
+import com.blueshroom.harry.avoid.Areas.Transition
+import com.blueshroom.harry.avoid.Mods.*
 
 private const val TAG : String = "void_MAIN_ACTIVITY"
 
@@ -308,22 +316,22 @@ class MainActivity : AppCompatActivity() {
                 "You land on the Sun",
                 "The sun is so cool")
 
-        area1.addAction(TransitionAction(game,"trans12",Transition(area1,area2)))
-        area1.addAction(TransitionAction(game,"trans13",Transition(area1,area3)))
-        area2.addAction(TransitionAction(game,"trans21",Transition(area2,area1)))
-        area2.addAction(TransitionAction(game,"trans23",Transition(area2,area3)))
-        area3.addAction(TransitionAction(game,"trans31",Transition(area3,area1)))
-        area3.addAction(TransitionAction(game,"trans32",Transition(area3,area2)))
+        area1.addAction(TransitionAction(game, "trans12", Transition(area1, area2)))
+        area1.addAction(TransitionAction(game, "trans13", Transition(area1, area3)))
+        area2.addAction(TransitionAction(game, "trans21", Transition(area2, area1)))
+        area2.addAction(TransitionAction(game, "trans23", Transition(area2, area3)))
+        area3.addAction(TransitionAction(game, "trans31", Transition(area3, area1)))
+        area3.addAction(TransitionAction(game, "trans32", Transition(area3, area2)))
 
         val modListTurnEarth = mutableListOf<Mod>()
         modListTurnEarth.add(ImageMod(R.drawable.earth_test_turned)) // When button pressed, change Earth Image
         modListTurnEarth.add(RemoveActionMod("turn_earth")) // Remove itself
-        val turnEarthAction = ModifierAction(game, "turn_earth", "Turn the Earth","You turned the Earth!", modListTurnEarth)
+        val turnEarthAction = ModifierAction(game, "turn_earth", "Turn the Earth", "You turned the Earth!", modListTurnEarth)
 
         val list2 = mutableListOf<Mod>()
         list2.add(ImageMod(R.drawable.earth_test)) // When button pressed, change Earth Image
         list2.add(RemoveActionMod("turn_earth_back")) // Remove itself
-        val turnEarthBackAction = ModifierAction(game,"turn_earth_back","Turn the Earth","You turned the Earth!",list2)
+        val turnEarthBackAction = ModifierAction(game, "turn_earth_back", "Turn the Earth", "You turned the Earth!", list2)
 
         turnEarthAction.addMod(AddActionMod(turnEarthBackAction)) // Add previous action
         turnEarthBackAction.addMod(AddActionMod(turnEarthAction))
@@ -331,18 +339,18 @@ class MainActivity : AppCompatActivity() {
         area1.addAction(turnEarthAction)
 
         // Simple ModificationAction
-        val sayBoopAction = ModifierAction(game,"say_boop","Say Boop")
+        val sayBoopAction = ModifierAction(game, "say_boop", "Say Boop")
         sayBoopAction.addMod(TextMod("Boop!"))
         area2.addAction(sayBoopAction)
 
 
-        val soundAction = ModifierAction(game,"sound_test", "Bell")
+        val soundAction = ModifierAction(game, "sound_test", "Bell")
         soundAction.addMod(SoundMod(R.raw.bell))
         area3.addAction(soundAction)
 
-        val flagAction = ModifierAction(game,"flag_test","Set Flag!")
+        val flagAction = ModifierAction(game, "flag_test", "Set Flag!")
         val flagList = mutableListOf<FlagSetter>()
-        flagList.add(FlagSetter("swordTaken",true))
+        flagList.add(FlagSetter("swordTaken", true))
         flagAction.addMod(FlagMod(flagList))
         area2.addAction(flagAction)
 

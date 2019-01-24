@@ -1,4 +1,6 @@
-package com.blueshroom.harry.avoid
+package com.blueshroom.harry.avoid.Areas
+
+import com.blueshroom.harry.avoid.R
 
 class ThroughArea(val id : String,
                   private var drawId : Int = R.drawable.default_location_image,
