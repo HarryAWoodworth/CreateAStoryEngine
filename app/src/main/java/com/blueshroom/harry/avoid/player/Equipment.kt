@@ -1,4 +1,4 @@
-package com.blueshroom.harry.avoid.PlayerCharacter
+package com.blueshroom.harry.avoid.player
 
 class Equipment
 {

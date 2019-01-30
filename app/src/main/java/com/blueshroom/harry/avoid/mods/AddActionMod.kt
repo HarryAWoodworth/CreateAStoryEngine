@@ -1,6 +1,6 @@
-package com.blueshroom.harry.avoid.Mods
+package com.blueshroom.harry.avoid.mods
 
-import com.blueshroom.harry.avoid.Actions.Action
+import com.blueshroom.harry.avoid.actions.Action
 
 class AddActionMod(private val action : Action) : Mod()
 {

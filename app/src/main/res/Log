@@ -24,8 +24,7 @@
                 (X) Load flags from file
     ********** DATA DRIVEN **********
 
-    1       ( ) through area testing
-    1           ( ) random event testing
+
     2       ( ) Global Clock (current time)
     2           ( ) timed events testing
     3       ( ) Area music (change only if  area says so (has diff music id saved), otherwise play globally)
@@ -56,4 +55,5 @@
             ( ) Area that can be reinforced
                 ( ) Generates enemies if not reinforced?
 
-
+            ( ) through area testing
+                ( ) random event testing

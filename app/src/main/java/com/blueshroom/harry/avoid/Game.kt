@@ -2,9 +2,10 @@ package com.blueshroom.harry.avoid
 
 import android.content.Context
 import android.util.Log
-import com.blueshroom.harry.avoid.Actions.FlagSetter
-import com.blueshroom.harry.avoid.Areas.Area
-import com.blueshroom.harry.avoid.Areas.GenericArea
+import com.blueshroom.harry.avoid.actions.FlagSetter
+import com.blueshroom.harry.avoid.areas.Area
+import com.blueshroom.harry.avoid.areas.GenericArea
+import com.blueshroom.harry.avoid.player.Player
 
 private const val FLAG_FILE_NAME = "flag_data.txt"
 private const val FLAG_FILE_ID = R.raw.flag_data
@@ -14,6 +15,9 @@ class Game(private val context : Context)
 {
     // Game Flags
     private val flags = mutableMapOf<String,Boolean>()
+
+    // Player
+    var player = Player()
 
     private var currentArea : Area =
             GenericArea("default_game_area_placeholder",
@@ -86,5 +90,5 @@ class Game(private val context : Context)
     // Getters and setters for current area
     fun setCurrentArea(area : Area) { this.currentArea = area }
     fun getCurrentArea() : Area { return this.currentArea }
-    fun getFlag(flagId : String) : Boolean? { return this.flags.get(flagId)}
+    fun flag(flagId : String) : Boolean? { return this.flags.get(flagId)}
 }

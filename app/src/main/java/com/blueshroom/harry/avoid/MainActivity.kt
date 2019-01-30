@@ -12,14 +12,14 @@ import android.widget.BaseAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.grid_entry.view.*
 import android.media.AudioManager
-import com.blueshroom.harry.avoid.Actions.Action
-import com.blueshroom.harry.avoid.Actions.FlagSetter
-import com.blueshroom.harry.avoid.Actions.ModifierAction
-import com.blueshroom.harry.avoid.Actions.TransitionAction
-import com.blueshroom.harry.avoid.Areas.Area
-import com.blueshroom.harry.avoid.Areas.GenericArea
-import com.blueshroom.harry.avoid.Areas.Transition
-import com.blueshroom.harry.avoid.Mods.*
+import com.blueshroom.harry.avoid.actions.Action
+import com.blueshroom.harry.avoid.actions.FlagSetter
+import com.blueshroom.harry.avoid.actions.ModifierAction
+import com.blueshroom.harry.avoid.actions.TransitionAction
+import com.blueshroom.harry.avoid.areas.Area
+import com.blueshroom.harry.avoid.areas.GenericArea
+import com.blueshroom.harry.avoid.areas.Transition
+import com.blueshroom.harry.avoid.mods.*
 
 private const val TAG : String = "void_MAIN_ACTIVITY"
 
@@ -111,7 +111,7 @@ class MainActivity : AppCompatActivity() {
         imageView.setImageResource(area.areaDrawId)
 
         // Set action button grid
-        buttonGrid.adapter = CustomAdapter(this,area.generateActions())
+        buttonGrid.adapter = CustomAdapter(this,area.generateActions(game))
 
         // Set and start typewriter
         typewriterView.text = textStr
@@ -128,7 +128,7 @@ class MainActivity : AppCompatActivity() {
     // Refresh the action grid View
     private fun refreshActionGrid()
     {
-        buttonGrid.adapter = CustomAdapter(this,game.getCurrentArea().generateActions())
+        buttonGrid.adapter = CustomAdapter(this,game.getCurrentArea().generateActions(game))
     }
 
     // Safe new image in currentArea and modify image View
@@ -201,7 +201,7 @@ class MainActivity : AppCompatActivity() {
 
                         is ModifierAction ->
                         {
-                            val actionsTemp = cont.game.getCurrentArea().generateActions()
+                            val actionsTemp = cont.game.getCurrentArea().generateActions(cont.game)
 
                             for(mod : Mod in action.mods)
                             {

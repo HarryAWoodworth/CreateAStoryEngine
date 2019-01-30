@@ -1,4 +1,4 @@
-package com.blueshroom.harry.avoid.Mods
+package com.blueshroom.harry.avoid.mods
 
 /**
  * For a modifier, the mod must have a

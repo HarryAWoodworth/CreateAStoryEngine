@@ -1,4 +1,4 @@
-package com.blueshroom.harry.avoid.Mods
+package com.blueshroom.harry.avoid.mods
 
 class RemoveActionMod(private val actionID : String) : Mod()
 {

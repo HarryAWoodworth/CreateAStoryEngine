@@ -1,7 +1,9 @@
-package com.blueshroom.harry.avoid.Areas
+package com.blueshroom.harry.avoid.areas
 
-import com.blueshroom.harry.avoid.Actions.Action
+import com.blueshroom.harry.avoid.Game
+import com.blueshroom.harry.avoid.actions.Action
 import com.blueshroom.harry.avoid.R
+import com.blueshroom.harry.avoid.player.Player
 
 class GenericArea(val id : String,
                   newName : String = "DEFAULT",
@@ -15,13 +17,23 @@ class GenericArea(val id : String,
     override var description: String = newDescription
 
     // Generate the action list and return is as an un-mutable List
-    override fun generateActions(/** player: Player, game: Game> **/): MutableList<Action>
+    override fun generateActions(game: Game): MutableList<Action>
     {
         /**
          * Add/Remove actions based on Player and Game global flags
          */
+        val actionsTemp = this.actions
 
-        return this.actions
+        for(a : Action in actionsTemp)
+        {
+            // Filter actions that have met their requirements
+            /*if(!(a.meetsRequirements(game)))
+            {
+                actionsTemp.remove(a)
+            }*/
+        }
+
+        return actionsTemp
     }
 
 }

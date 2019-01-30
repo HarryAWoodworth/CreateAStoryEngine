@@ -1,6 +1,6 @@
-package com.blueshroom.harry.avoid.Actions
+package com.blueshroom.harry.avoid.actions
 
-import com.blueshroom.harry.avoid.Areas.Transition
+import com.blueshroom.harry.avoid.areas.Transition
 import com.blueshroom.harry.avoid.Game
 
 /**
@@ -11,12 +11,10 @@ import com.blueshroom.harry.avoid.Game
 
 class TransitionAction(game: Game,
                        id : String,
-                       val transition : Transition,
-                       flagsSet : List<FlagSetter> = listOf()) : Action(game,id,flagsSet)
+                       val transition : Transition) : Action(game,id)
 {
     override fun getActionText() : String
     {
         return "Go to " + transition.areaTo.name
     }
-
 }

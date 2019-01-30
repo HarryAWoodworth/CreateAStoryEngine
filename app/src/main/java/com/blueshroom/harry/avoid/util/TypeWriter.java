@@ -1,4 +1,4 @@
-package com.blueshroom.harry.avoid.Util;
+package com.blueshroom.harry.avoid.util;
 
 import android.content.Context;
 import android.os.Handler;

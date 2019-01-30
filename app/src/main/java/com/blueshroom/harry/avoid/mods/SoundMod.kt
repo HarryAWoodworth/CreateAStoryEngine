@@ -1,4 +1,4 @@
-package com.blueshroom.harry.avoid.Mods
+package com.blueshroom.harry.avoid.mods
 
 class SoundMod(private val soundId : Int) : Mod()
 {

@@ -1,18 +1,12 @@
-package com.blueshroom.harry.avoid.Areas
-
-/**
- * https://discuss.kotlinlang.org/t/overload-tostring-for-use-in-arrayadapter/3743/3
- * https://stackoverflow.com/questions/44200075/val-and-var-in-kotlin
- * https://www.journaldev.com/17318/kotlin-string
- * https://kotlinlang.org/docs/tutorials/android-plugin.html
- */
+package com.blueshroom.harry.avoid.areas
 
 class Transition(val areaFrom : Area,
                  val areaTo : Area)
 {
     // Optional throughArea
-    private var areaThrough : ThroughArea? = null
+    // private var areaThrough : ThroughArea? = null
 
+    /*
     fun runThroughEvent()
     {
         val areaThroughTemp = areaThrough
@@ -28,20 +22,23 @@ class Transition(val areaFrom : Area,
             }
         }
     }
+    */
 
     // Return the transition text by combining the text fields from
     // areaFrom, through, and areaTo
     fun getTransitionText() : String
     {
-        val areaThroughTemp = areaThrough
-        if(areaThroughTemp != null)
-            return areaFrom.areaFromStr + areaThroughTemp.getThroughStr() + areaTo.areaToStr
+        // val areaThroughTemp = areaThrough
+        // if(areaThroughTemp != null)
+        //   return areaFrom.areaFromStr + areaThroughTemp.getThroughStr() + areaTo.areaToStr
         return areaFrom.areaFromStr + areaTo.areaToStr
     }
 
+    /*
     // Set areaThrough
     fun setNewAreaThrough(newAreaThrough : ThroughArea)
     {
         this.areaThrough = newAreaThrough
     }
+    */
 }

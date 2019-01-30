@@ -1,4 +1,4 @@
-package com.blueshroom.harry.avoid.Mods
+package com.blueshroom.harry.avoid.mods
 
 class ImageMod(private val imageId : Int) : Mod()
 {

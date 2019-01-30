@@ -1,4 +1,4 @@
-package com.blueshroom.harry.avoid.Areas
+package com.blueshroom.harry.avoid.areas
 
 import com.blueshroom.harry.avoid.R
 

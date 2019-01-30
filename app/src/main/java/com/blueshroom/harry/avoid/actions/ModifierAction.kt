@@ -1,7 +1,7 @@
-package com.blueshroom.harry.avoid.Actions
+package com.blueshroom.harry.avoid.actions
 
 import com.blueshroom.harry.avoid.Game
-import com.blueshroom.harry.avoid.Mods.Mod
+import com.blueshroom.harry.avoid.mods.Mod
 
 /**
  * Takes a text String to return in getActionText()
@@ -12,8 +12,7 @@ class ModifierAction(game: Game,
                      id : String,
                      val text : String = "MISSING ACTION TEXT: $id",
                      val descrText: String = "MISSING DESCRIPTION TEXT: $id",
-                     val mods : MutableList<Mod> = mutableListOf<Mod>(),
-                     flagsSet : List<FlagSetter> = listOf()) : Action(game,id,flagsSet)
+                     val mods : MutableList<Mod> = mutableListOf<Mod>()) : Action(game,id)
 {
     override fun getActionText() : String { return text }
 

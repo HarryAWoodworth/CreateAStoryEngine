@@ -1,9 +1,11 @@
-package com.blueshroom.harry.avoid.Areas
+package com.blueshroom.harry.avoid.areas
 
 import android.util.Log
-import com.blueshroom.harry.avoid.Actions.Action
+import com.blueshroom.harry.avoid.Game
+import com.blueshroom.harry.avoid.actions.Action
 import com.blueshroom.harry.avoid.R
-import com.blueshroom.harry.avoid.Actions.TransitionAction
+import com.blueshroom.harry.avoid.actions.TransitionAction
+import com.blueshroom.harry.avoid.player.Player
 
 // Logging tag
 private const val TAG : String = "Area Class"
@@ -19,7 +21,7 @@ abstract class Area(private val areaId : String,
 
     // Returns a list of Actions to be converted to Buttons
     // Override in children so each sets their actions uniquely
-    abstract fun generateActions(/** player : Player, global_flags : Map<String, Boolean> **/) : MutableList<Action>
+    abstract fun generateActions(game : Game) : MutableList<Action>
 
     /** TODO TEST IT! **/
     // Add a new Action

@@ -1,10 +1,10 @@
-package com.blueshroom.harry.avoid.PlayerCharacter
+package com.blueshroom.harry.avoid.player
 
-class Player(private val name : String,
-             private val health : Int,
-             private val sanity : Int,
-             private val inventory : Inventory,
-             private val equipment: Equipment)
+class Player(private val name : String = "",
+             private val health : Int = 0,
+             private val sanity : Int = 0,
+             private val inventory : Inventory = Inventory(),
+             private val equipment: Equipment = Equipment())
 {
     // Getters
     fun name() : String { return this.name }
